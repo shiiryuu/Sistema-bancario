@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transferir</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="transferir.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Transferência</h1>
+    <input type="text" id="origem" placeholder="Conta de Origem" />
+    <input type="text" id="destino" placeholder="Conta de Destino" />
+    <input type="number" id="valor" placeholder="Valor da Transferência" />
+    <button onclick="transferir()">Transferir</button>
+    <a href="menu.html"><button>Voltar</button></a>
+    <div id="resumo"></div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="transferir.js"></script>
+</body>
+</html>

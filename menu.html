@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu Principal</title>
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="img/fundo 3.png" alt="Logo Banco" class="logo" />
+    </div>
+    <nav>
+      <a href="criar conta.html"><button>Criar Conta</button></a>
+      <a href="consultar-conta.html"><button>Consultar Conta</button></a>
+      <a href="remover-conta.html"><button>Remover Conta</button></a>
+      <a href="creditar.html"><button>Creditar</button></a>
+      <a href="debitar.html"><button>Debitar</button></a>
+      <a href="render-juros.html"><button>Render Juros</button></a>
+      <a href="transferir.html"><button>Transferência</button></a>
+      <a href="listar-contas.html"><button>Listar Contas</button></a>
+      <a href="index.html" class="sair"><button>Sair</button></a>
+    </nav>
+  </header>
+
+  <script src="main.js"></script>
+  <script>
+    // Ao carregar a página
+    window.onload = () => {
+      verificarLogin(); // Verifica se o usuário está logado
+
+      // Botão de sair
+      const btnSair = document.getElementById("btn-sair");
+      if (btnSair) {
+        btnSair.addEventListener("click", sair);
+      }
+    };
+  </script>
+</body>
+</html>

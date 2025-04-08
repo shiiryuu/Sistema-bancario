@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creditar Valor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="creditar.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Creditar</h1>
+    <input type="text" id="numero" placeholder="Número da Conta" />
+    <input type="number" id="valor" placeholder="Valor a Creditar" />
+    <button onclick="creditar()">Creditar</button>
+    <a href="menu.html"><button>Voltar</button></a>
+
+    <!-- Mensagem de resultado -->
+    <div id="mensagem" class="mensagem"></div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="creditar.js"></script>
+</body>
+</html>

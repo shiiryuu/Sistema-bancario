@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Criar Conta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Criar Nova Conta</h1>
+    <form id="form-criar-conta">
+      <input type="text" placeholder="Número da Conta" id="numero" required>
+      <input type="text" placeholder="Agência" id="agencia" required>
+      <select id="tipo" required>
+        <option value="">Tipo de Conta</option>
+        <option value="CORRENTE">Corrente</option>
+        <option value="POUPANCA">Poupança</option>
+      </select>
+      <input type="text" placeholder="Nome do Titular" id="nome" required>
+      <input type="text" placeholder="CPF do Titular" id="cpf" required>
+      <input type="text" placeholder="Endereço do Titular" id="endereco" required>
+      <input type="text" placeholder="Telefone do Titular" id="telefone" required>
+      <button type="submit">Criar Conta</button>
+      <a href="menu.html"><button type="button">Voltar ao Menu</button></a>
+    </form>
+    <p id="mensagem-sucesso" style="display:none; color:green; margin-top:15px;">Conta criada com sucesso!</p>
+  </div>
+  <script src="main.js"></script>
+  <script>
+    const form = document.getElementById("form-criar-conta");
+    const mensagem = document.getElementById("mensagem-sucesso");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const contas = getContas();
+
+      const novaConta = {
+        numero: document.getElementById("numero").value,
+        agencia: document.getElementById("agencia").value,
+        tipo: document.getElementById("tipo").value,
+        saldo: 0,
+        removida: false,
+        titular: {
+          nome: document.getElementById("nome").value,
+          cpf: document.getElementById("cpf").value,
+          endereco: document.getElementById("endereco").value,
+          telefone: document.getElementById("telefone").value
+        }
+      };
+
+      contas.push(novaConta);
+      setContas(contas);
+
+      mensagem.style.display = "block";
+      form.reset();
+
+      setTimeout(() => {
+        mensagem.style.display = "none";
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

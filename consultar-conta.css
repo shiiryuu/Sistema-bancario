@@ -1,0 +1,17 @@
+.card {
+  background: #ecf0f1;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card p {
+  margin: 0.5rem 0;
+}
+
+.card span {
+  font-weight: bold;
+  color: #2c3e50;
+}
